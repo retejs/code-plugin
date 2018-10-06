@@ -1,0 +1,17 @@
+{
+  "name": "rete-code-plugin",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/code-plugin.min.js",
+  "scripts": {
+    "build": "rete --build rete.config.js",
+    "build:dev": "rete --build rete.config.js --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "rete-cli": "^0.2.0"
+  }
+}
