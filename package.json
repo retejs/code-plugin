@@ -1,6 +1,6 @@
 {
   "name": "rete-code-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "build/code-plugin.min.js",
   "scripts": {
@@ -10,7 +10,9 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "case": "^1.5.5"
+  },
   "devDependencies": {
     "rete-cli": "^0.2.0"
   }

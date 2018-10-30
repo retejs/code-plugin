@@ -1,4 +1,7 @@
 export default {
     input: 'src/index.js',
-    name: 'CodePlugin'
+    name: 'CodePlugin',
+    globals: {
+        case: 'Case'
+    }
 }

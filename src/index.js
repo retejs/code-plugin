@@ -1,4 +1,10 @@
+import { camel } from 'case';
+
 function install(editor, params) {}
+
+function getVarName(node) {
+    return camel(`${node.name}${node.id}`);
+}
 
 async function generate(engine, data) {
     let file = '';
@@ -14,7 +20,7 @@ async function generate(engine, data) {
                     return;
                 }
 
-                const varName = `${node.name.toLowerCase()}${node.id}${name}`;
+                const varName = `${getVarName(node)}${name}`;
 
                 file += `const ${varName} = ${expression};\n`;
                 outputs[name] = varName;
