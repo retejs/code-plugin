@@ -8,8 +8,12 @@
     "build:dev": "rete --build rete.config.js --watch",
     "prepublishOnly": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Vitaliy Stoliarov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/retejs/code-plugin.git"
+  },
   "dependencies": {
     "case": "^1.5.5"
   },
