@@ -2,7 +2,8 @@
   "name": "rete-code-plugin",
   "version": "0.1.1",
   "description": "",
-  "main": "build/code-plugin.min.js",
+  "main": "build/code-plugin.common.js",
+  "module": "build/code-plugin.esm.js",
   "scripts": {
     "build": "rete --build rete.config.js",
     "build:dev": "rete --build rete.config.js --watch",
@@ -15,9 +16,10 @@
     "url": "https://github.com/retejs/code-plugin.git"
   },
   "dependencies": {
-    "case": "^1.5.5"
+    "case": "^1.5.5",
+    "rete": "^1.3.0"
   },
   "devDependencies": {
-    "rete-cli": "^0.2.0"
+    "rete-cli": "^0.6.0"
   }
 }
