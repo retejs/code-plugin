@@ -6,11 +6,12 @@ function getVarName(node) {
     return camel(`${node.name}${node.id}`);
 }
 
-async function generate(engine, data) {
+export async function generate(engine, data) {
     let file = '';
     
     engine = engine.clone();
-    engine.components = engine.components.map(c => {
+
+    Array.from(engine.components.values()).forEach(c => {
         c = Object.assign(Object.create(Object.getPrototypeOf(c)), c)
 
         c.worker = (node, inputs, outputs) => {
@@ -29,7 +30,7 @@ async function generate(engine, data) {
         }
         c.worker.bind(c);
 
-        return c;
+        engine.components.set(c.name, c);
     })
 
     await engine.process(data);
@@ -38,6 +39,5 @@ async function generate(engine, data) {
 }
 
 export default {
-    install,
-    generate
+    install
 }
